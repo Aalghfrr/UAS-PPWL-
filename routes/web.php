@@ -18,7 +18,6 @@ Route::middleware('guest')->group(function () {
 // Logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// ✅ PERBAIKAN: GUNAKAN CLASS LANGSUNG JIKA MIDDLEWARE ALIAS MASIH ERROR
 Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     
@@ -43,7 +42,7 @@ Route::middleware(['auth', AdminMiddleware::class])->prefix('admin')->name('admi
     Route::post('/bookings/{id}/complete', [AdminController::class, 'completeBooking'])->name('bookings.complete');
 });
 
-// User Routes (hanya untuk user biasa)
+// User Routes 
 Route::middleware(['auth'])->group(function () {
     // Dashboard User
     Route::get('/', [UserController::class, 'dashboard'])->name('user.dashboard');

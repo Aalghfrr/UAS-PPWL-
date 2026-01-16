@@ -15,7 +15,7 @@ return new class extends Migration
             $table->integer('capacity');
             $table->enum('status', ['available', 'maintenance', 'unavailable'])->default('available');
             $table->text('description')->nullable();
-            $table->string('image')->nullable(); // TANPA after()
+            $table->string('image')->nullable(); 
             $table->timestamps();
         });
     }

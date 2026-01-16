@@ -693,14 +693,6 @@
             </div>
         </div>
 
-        <!-- ⚡ DEBUG INFO -->
-        <div style="display: none; background: #f1f5f9; padding: 10px; border-radius: 8px; margin-bottom: 20px; font-size: 12px;">
-            <strong>Debug Info:</strong><br>
-            Total Rooms: {{ $rooms->count() }}<br>
-            Last Updated: {{ now() }}<br>
-            Session ID: {{ session()->getId() }}
-        </div>
-
         <!-- Rooms Grid -->
         <div class="rooms-grid">
             @foreach($rooms as $room)
@@ -931,7 +923,7 @@
     </div>
 
     <script>
-        // ⚡ FORCE REFRESH FUNCTION
+        // FORCE REFRESH FUNCTION
         function forceRefresh() {
             console.log('Force refreshing page...');
             // Clear localStorage dan sessionStorage
@@ -942,7 +934,7 @@
             window.location.href = window.location.href + '?force=' + Date.now();
         }
 
-        // ⚡ AUTO-REFRESH AFTER SUCCESS
+        // AUTO-REFRESH AFTER SUCCESS
         document.addEventListener('DOMContentLoaded', function() {
             const successAlert = document.getElementById('successAlert');
             if (successAlert) {

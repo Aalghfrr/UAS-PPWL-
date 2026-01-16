@@ -47,7 +47,7 @@
             display: flex;
             gap: 15px;
             position: sticky;
-            top: 60px; /* Di bawah header utama */
+            top: 60px; 
             z-index: 100;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
             justify-content: center;
@@ -115,7 +115,7 @@
         }
 
         .dropdown-menu a {
-            display: flex; /* FIX: Membuat ikon dan teks sejajar */
+            display: flex;
             align-items: center;
             gap: 12px;
             padding: 12px 16px;

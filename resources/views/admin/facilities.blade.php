@@ -601,14 +601,12 @@
     </style>
     
     <script>
-        // ⚠️ FORCE NO CACHE SCRIPT
         if (performance.navigation.type === 2) {
             location.reload(true);
         }
     </script>
 </head>
 <body>
-    <!-- ⚠️ FORCE NO CACHE PHP HEADERS -->
     <?php
     header("Cache-Control: no-cache, no-store, must-revalidate");
     header("Pragma: no-cache");
@@ -656,7 +654,7 @@
             Kembali ke Dashboard
         </a>
 
-        <!-- ⚠️ AUTO-REFRESH ALERT -->
+        <!-- AUTO-REFRESH ALERT -->
         @if(session('success'))
             <div class="alert alert-success" id="successAlert">
                 {{ session('success') }}
@@ -929,7 +927,7 @@
     </div>
 
     <script>
-        // ⚠️ AUTO-REFRESH AFTER SUCCESS
+        // AUTO-REFRESH AFTER SUCCESS
         document.addEventListener('DOMContentLoaded', function() {
             const successAlert = document.getElementById('successAlert');
             if (successAlert) {

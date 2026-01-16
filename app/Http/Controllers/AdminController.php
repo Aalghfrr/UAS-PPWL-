@@ -245,7 +245,6 @@ class AdminController extends Controller
             ]);
     }
 
-    // ⚡ FACILITIES METHODS - PERBAIKAN UTAMA
     public function facilities(Request $request)
     {
         // Cek admin
